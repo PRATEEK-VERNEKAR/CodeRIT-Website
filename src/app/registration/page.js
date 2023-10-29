@@ -26,14 +26,10 @@ export default function Home() {
   }
 
   useEffect(()=>{
-
-    // const formArea=document.getElementById('form-area');
     const formArea=document.querySelector('#form-area');
-    const windowArea=document.getElementById('window-area');
 
     if(showWindow){
       formArea.classList.add('blur-lg')
-      // windowArea.classList.add('blur-none')
     }
 
   },[showWindow])
@@ -61,7 +57,6 @@ export default function Home() {
       
 
       if(res.status!=200){
-
         return;
       }
       else{
@@ -133,18 +128,19 @@ export default function Home() {
             </div>
           </div>
 
-          <div id='window-area' className={`${showWindow?"":""} absolute z-10  w-[90%] h-[150px] top-64 left-7`}>
+          <div className={`${showWindow?"":"hidden"} absolute z-10  w-[90%] h-[150px] top-64 left-7`}>
                     {
-                      !load?
+                      load?
                       <div className='w-full h-full flex justify-center items-center'>
                         <Image src='/Loader.svg' width={100} height={100}></Image>
                       </div>
                       :
-                      <div className='w-full h-full flex flex-col justify-between bg-gray-400'>
+                      <div className='w-full h-full flex flex-col justify-between items-center bg-gray-400 rounded-3xl'>
                         <h1 className='text-center text-3xl font-bold mt-4 text-green-900'>Your Response Recorded</h1>
-                        <div className='flex justify-evenly'>
-                          <a className='px-3 py-2 bg-red-200' href='/'>Cancel</a>
-                          <a className='px-3 py-2 bg-red-200' href='https://chat.whatsapp.com/He9eoOHo26rDAXFiUQul9E'>Join Whatsapp</a>
+                        <span className='text-3xl'> &#128591; </span>
+                        <div className='flex justify-evenly w-full mb-2 '>
+                          <a onClick={()=>{setShowWindow(false)}} className=' rounded-full px-3 py-2 bg-red-200' href='/'>Cancel</a>
+                          <a onClick={()=>{setShowWindow(false)}} className=' rounded-full px-3 py-2 bg-red-200' target='_blanck' href='https://chat.whatsapp.com/He9eoOHo26rDAXFiUQul9E'>Join Whatsapp</a>
                         </div>
                       </div> 
                     }
