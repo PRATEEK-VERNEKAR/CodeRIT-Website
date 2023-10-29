@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-// import logo from "@/public/logo.png";
+import logo from "@/public/logo.png";
 import discord from "@/public/socials/discord.svg";
 import github from "@/public/socials/github.svg";
 import instagram from "@/public/socials/instagram.svg";
