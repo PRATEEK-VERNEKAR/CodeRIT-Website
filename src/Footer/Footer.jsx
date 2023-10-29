@@ -22,6 +22,12 @@ export default function Footer(){
                     <a href="https://www.instagram.com/code_rit/" target="_blanck">
                         <Image src="/instagram.svg" width={30} height={30}></Image>
                     </a> 
+                    <a href="https://t.me/+JkfLZPe6p0cyNmY9" target="_blanck">
+                        <Image src="/telegram.svg" width={30} height={30}></Image>
+                    </a> 
+                    <a href="https://www.linkedin.com/company/coderitclub/" target="_blanck">
+                        <Image src="/linkedin.svg" width={30} height={30}></Image>
+                    </a> 
                 </div>
             </nav>
         </footer>

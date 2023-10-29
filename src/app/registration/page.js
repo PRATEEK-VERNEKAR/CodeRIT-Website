@@ -11,6 +11,8 @@ import { useRouter } from 'next/navigation'
 export default function Home() {
   const router=useRouter();
 
+  const [message,setMessage]=useState({text:"",color:""});
+  const [showMsg,setShowMsg]=useState(false);
   const [student,setStudent]=useState({name:"",usn:"",branch:"",email:"",phone:"",queries:""});
 
   const handleChange=(e)=>{
@@ -26,6 +28,8 @@ export default function Home() {
     // console.log(student)
     
     if(!student.name || !student.usn || !student.branch || !student.email || !student.phone){
+      setShowMsg(true);
+      setMessage({text:"Enter all fields",color:'bg-red-400'});
       alert("Enter all fields");
       console.log("EMPYT")
       return 
@@ -33,14 +37,21 @@ export default function Home() {
 
     try{
       const res=await axios.post('/api/register',student);
-      // console.log(res);
+      console.log(res);
 
       if(res.status!=200){
+        setShowMsg(true);
+        setMessage({text:"Your response could not be stored",color:'bg-red-400'});
+
         alert("Your response could not be stored")
         return;
       }
       else{
+        // setShowMsg(true);
+
         setStudent({name:"",usn:"",branch:"",email:""});
+        // setMessage({text:"Thank You for registration",color:'bg-red-400'});
+
         alert("Thank You for registration");
         router.push('/')
       }
@@ -99,6 +110,12 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+
+
+        {/* <div className={`${showMsg?"hidden":""} absolute w-[100px] h-[100px] border-2 border-red-200 top-0 ${message.color}`}> */}
+        <div className={` absolute w-[100px] h-[100px] border-2 border-red-200 top-0 ${message.color}`}>
+            {/* <p>{message.text}</p> */}
         </div>
       </div>
     </div>
