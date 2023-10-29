@@ -26,25 +26,55 @@ const Juniors=[
     {
         "name":"Prachi",
         "src":"/Juniors/Prachi.jpg",
-        "url":"",
+        "url":"http://www.linkedin.com/in/prachi-gopsitkar-5a6510230",
         "desc":"We are the Junior core member of this prestigious club of Ramaiah"
     },
     {
         "name":"Nikith",
         "src":"/Juniors/Nikith.jpg",
-        "url":"",
+        "url":"https://www.linkedin.com/in/nikith-ganga/",
         "desc":"We are the Junior core member of this prestigious club of Ramaiah"
     },
     {
         "name":"Siddharth",
         "src":"/Juniors/Siddharth.jpg",
+        "url":"https://www.linkedin.com/in/siddharth-bhetariya/",
+        "desc":"We are the Junior core member of this prestigious club of Ramaiah"
+    },
+    {
+        "name":"Yashashwini Singh",
+        "src":"/Juniors/Yashi.jpg",
         "url":"",
         "desc":"We are the Junior core member of this prestigious club of Ramaiah"
     },
     {
-        "name":"Yashi",
-        "src":"/Juniors/Yashi.jpg",
-        "url":"",
+        "name":"Arjun Golla",
+        "src":"/Juniors/Arjun.jpg",
+        "url":"https://www.linkedin.com/in/arjungolla/",
+        "desc":"We are the Junior core member of this prestigious club of Ramaiah"
+    },
+    {
+        "name":"Shreyansh Narayana",
+        "src":"/Juniors/Shreyansh.jpg",
+        "url":"https://www.linkedin.com/in/shreyansh-narayan-878b09222/",
+        "desc":"We are the Junior core member of this prestigious club of Ramaiah"
+    },
+    {
+        "name":"Meena Kumari",
+        "src":"/Juniors/.jpg",
+        "url":"https://www.linkedin.com/in/shreyansh-narayan-878b09222/",
+        "desc":"We are the Junior core member of this prestigious club of Ramaiah"
+    },
+    {
+        "name":"Amogh SK",
+        "src":"/Juniors/.jpg",
+        "url":"https://in.linkedin.com/in/amogh-sk",
+        "desc":"We are the Junior core member of this prestigious club of Ramaiah"
+    },
+    {
+        "name":"Aniruddh Mantrala",
+        "src":"/Juniors/.jpg",
+        "url":"https://www.linkedin.com/in/aniruddh-mantrala-31abb2221/",
         "desc":"We are the Junior core member of this prestigious club of Ramaiah"
     },
 ]
