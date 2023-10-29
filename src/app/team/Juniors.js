@@ -9,25 +9,25 @@ const Juniors=[
         "name":"Sahil Kulkarni",
         "src":"/Juniors/Sahil.jpg",
         "url":"",
-        "desc":"We are the Junior core member of this prestigious club of Ramaiah"
+        "desc":"Enthusiastic MERN stack developer, driven by a passion for mastering intricate Data Structures and Algorithms. Currently delving into the fascinating realm of Machine Learning, aiming to blend elegant code with innovative solutions."
     },
     {
         "name":"Abhay Gupta",
         "src":"/Juniors/Abhay.jpg",
         "url":"",
-        "desc":"We are the Junior core member of this prestigious club of Ramaiah"
+        "desc":`"Passionate coder and avid developer with an insatiable curiosity, exploring Indian medieval history and heritage."`
     },
     {
         "name":"Agniv",
         "src":"/Juniors/Agniv.jpg",
         "url":"",
-        "desc":"We are the Junior core member of this prestigious club of Ramaiah"
+        "desc":`I enjoy coding, watching movies, and consider myself a Potterhead. I'm also a pet lover and passionate about dancing. I'm your go-to for all things Harry Potter spells. Ask away!"`
     },
     {
         "name":"Prachi",
         "src":"/Juniors/Prachi.jpg",
         "url":"http://www.linkedin.com/in/prachi-gopsitkar-5a6510230",
-        "desc":"We are the Junior core member of this prestigious club of Ramaiah"
+        "desc":"Prachi Gopsitkar from CSE 3rd year. Computer Science Engineer passionate about web-development , AI&ML , Data Analysis and Deep Learning."
     },
     {
         "name":"Nikith",
@@ -75,7 +75,7 @@ const Juniors=[
         "name":"Aniruddh Mantrala",
         "src":"/Juniors/Aniruddh.jpg",
         "url":"https://www.linkedin.com/in/aniruddh-mantrala-31abb2221/",
-        "desc":"We are the Junior core member of this prestigious club of Ramaiah"
+        "desc":`while(true) { Eat.Sleep.Code }`
     },
 ]
 
