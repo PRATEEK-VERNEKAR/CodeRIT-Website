@@ -6,8 +6,8 @@ import Footer from '../Footer/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'CODERIT',
-  description: 'Prestigious Coding Club of RIT',
+  title: 'CodeRIT',
+  description: 'A community that helps develop the Coding culture of RIT',
 }
 
 const mystyle={
