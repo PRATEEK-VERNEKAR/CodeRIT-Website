@@ -8,7 +8,6 @@ import linkedin from "@/public/socials/linkedin.svg";
 import spotify from "@/public/socials/spotify.svg";
 import telegram from "@/public/socials/telegram.svg";
 import whatsapp from "@/public/socials/whatsapp.svg";
-
 export default function Footer() {
   return (
     <footer

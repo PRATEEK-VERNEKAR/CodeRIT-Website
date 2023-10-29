@@ -11,7 +11,10 @@ import { useRouter } from 'next/navigation'
 export default function Home() {
   const router=useRouter();
 
+  const [message,setMessage]=useState({text:"",color:""});
+  const [showMsg,setShowMsg]=useState(false);
   const [student,setStudent]=useState({name:"",usn:"",branch:"",email:"",phone:"",queries:""});
+
 
   const handleChange=(e)=>{
     e.preventDefault();
@@ -26,8 +29,14 @@ export default function Home() {
     // console.log(student)
     
     if(!student.name || !student.usn || !student.branch || !student.email || !student.phone){
-      alert("Enter all fields");
-      console.log("EMPYT")
+      setShowMsg(true);
+      setMessage({text:"Enter all fields",color:'text-red-400'});
+
+      setTimeout(()=>{
+        setShowMsg(false);
+        setMessage({text:"",color:''});
+      },1000)
+
       return 
     }
 
@@ -36,18 +45,33 @@ export default function Home() {
       // console.log(res);
 
       if(res.status!=200){
-        alert("Your response could not be stored")
+        setShowMsg(true);
+        setMessage({text:"Your response could not be stored",color:'text-red-400'});
+
+
+        setTimeout(()=>{
+          setShowMsg(false);
+          setMessage({text:"",color:''});
+        },1000)
+
         return;
       }
       else{
-        setStudent({name:"",usn:"",branch:"",email:""});
-        alert("Thank You for registration");
-        router.push('/')
+        setShowMsg(true);
+
+        setStudent({name:"",usn:"",branch:"",email:"",phone:"",queries:""});
+        setMessage({text:"Thank You for registration",color:'text-green-400'});
+
+        setTimeout(()=>{
+          setShowMsg(false);
+          setMessage({text:"",color:''});
+          router.push('https://chat.whatsapp.com/He9eoOHo26rDAXFiUQul9E')
+        },1000)
+
       }
     }
     catch(error){
       alert("Server Error")
-      // console.log(error)
     }
     
   }
@@ -59,35 +83,43 @@ export default function Home() {
         <div
           className="absolute inset-0 bg-gradient-to-r from-blue-300 to-blue-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
         </div>
-        <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+        <div className="relative px-4 py-4 bg-white shadow-lg sm:rounded-3xl sm:p-10">
           <div className="max-w-md mx-auto">
+            
+
             <div>
               <h1 className="text-3xl font-semibold text-black text-center">Ice Breaker</h1>
             </div>
+
             <div className="divide-y divide-gray-200">
               <div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                 <div className="relative py-5">
-                  <input onChange={handleChange} value={student.name} autocomplete="off" id="name" name="name" type="text" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Name " />
+                  <input onChange={handleChange} value={student.name} autoComplete="off" id="name" name="name" type="text" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Name " />
                   <label htmlFor="name" className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Name</label>
                 </div>
                 <div className="relative py-5">
-                  <input onChange={handleChange} value={student.usn} autocomplete="off" id="usn" name="usn" type="text" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="USN" />
+                  <input onChange={handleChange} value={student.usn} autoComplete="off" id="usn" name="usn" type="text" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="USN" />
                   <label htmlFor="usn" className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">USN</label>
                 </div>
                 <div className="relative py-5">
-                  <input onChange={handleChange} value={student.branch} autocomplete="off" id="branch" name="branch" type="text" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Branch" />
+                  <input onChange={handleChange} value={student.branch} autoComplete="off" id="branch" name="branch" type="text" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Branch" />
                   <label htmlFor="branch" className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Branch</label>
                 </div>
+                
+                <div className={`${showMsg?"":"hidden"} w-full h-[40px] text-3xl mb-3 font-bold`}>
+                  <p className={`p-2 text-center ${message.color}`}>{message.text}</p>
+                </div>
+                
                 <div className="relative py-5">
-                  <input onChange={handleChange} value={student.email} autocomplete="off" id="email" name="email" type="text" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Email" />
+                  <input onChange={handleChange} value={student.email} autoComplete="off" id="email" name="email" type="text" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Email" />
                   <label htmlFor="email" className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Email</label>
                 </div>
                 <div className="relative py-5">
-                  <input onChange={handleChange} value={student.phone} autocomplete="off" id="phone" name="phone" type="text" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Phone" />
+                  <input onChange={handleChange} value={student.phone} autoComplete="off" id="phone" name="phone" type="text" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Phone" />
                   <label htmlFor="phone" className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Phone</label>
                 </div>
                 <div className="relative py-5">
-                  <input onChange={handleChange} value={student.queries} autocomplete="off" id="queries" name="queries" type="text" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Queries" />
+                  <input onChange={handleChange} value={student.queries} autoComplete="off" id="queries" name="queries" type="text" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Queries" />
                   <label htmlFor="queries" className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Queries for core team</label>
                 </div>
                 
@@ -100,6 +132,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+
       </div>
     </div>
 

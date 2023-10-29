@@ -1,3 +1,4 @@
+import FacultyCard from "@/src/Card/FacultyCard"
 import Card from "@/src/Card/Card"
 import Faculty from "./Faculty"
 import Seniors from "./Seniors"
@@ -5,21 +6,22 @@ import Juniors from './Juniors'
 
 export default function Team(){
     return(
-        <div className="mt-[100px] ">
-            <div className="bg-blue-300 mx-4 p-4">
-                <h1 className="text-center text-4xl p-4">The Faculty</h1>
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 justify-center">
+        <div className="mt-[100px] bg-gray-700">
+            <div className="mx-4 p-4 bg-gray-700">
+                <h1 className="text-center text-4xl p-4 "> <span className="bg-yellow-500 rounded-md shadow-2xl px-5">The Faculty</span> </h1>
+                <div className="bg-gray-700 grid grid-cols-1 lg:grid-cols-3 gap-3 justify-center ">
                     {
                         Faculty.map((ele,index)=>{
                             return(
-                                <Card person={ele} key={index}/>
+                                <FacultyCard person={ele} key={index}/>
                             )
                         })
                     }
                 </div>
             </div>
-            <div className="bg-red-300 mx-4 p-4">
-                <h1 className="text-center text-4xl p-4">Senior Core</h1>
+            <div className="bg-gray-700 mx-4 p-4">
+                <h1 className="text-center text-4xl p-4 drop-shadow-xl ">
+                    <span className="bg-yellow-500 rounded-md shadow-2xl px-5">  Senior Core</span> </h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-3">
                     {
                         Seniors.map((ele,index)=>{
@@ -30,9 +32,11 @@ export default function Team(){
                     }
                 </div>
             </div>
-            <div className="bg-orange-300 mx-4 p-4">
-                <h1 className="text-center text-4xl p-4">Junior Core</h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-3">
+            <div className=" mx-4 p-4">
+                <h1 className="text-center text-4xl p-4 "> <span className="rounded-md bg-yellow-500 shadow-2xl px-5"> 
+                 Junior Core</span>
+               </h1>
+                <div className="bg-gray-700 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-3">
                     {
                         Juniors.map((ele,index)=>{
                             return(
