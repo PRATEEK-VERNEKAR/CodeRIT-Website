@@ -59,24 +59,24 @@ const Juniors=[
         "url":"https://www.linkedin.com/in/shreyansh-narayan-878b09222/",
         "desc":"We are the Junior core member of this prestigious club of Ramaiah"
     },
-    {
-        "name":"Meena Kumari",
-        "src":"/Juniors/.jpg",
-        "url":"https://www.linkedin.com/in/shreyansh-narayan-878b09222/",
-        "desc":"We are the Junior core member of this prestigious club of Ramaiah"
-    },
-    {
-        "name":"Amogh SK",
-        "src":"/Juniors/.jpg",
-        "url":"https://in.linkedin.com/in/amogh-sk",
-        "desc":"We are the Junior core member of this prestigious club of Ramaiah"
-    },
-    {
-        "name":"Aniruddh Mantrala",
-        "src":"/Juniors/.jpg",
-        "url":"https://www.linkedin.com/in/aniruddh-mantrala-31abb2221/",
-        "desc":"We are the Junior core member of this prestigious club of Ramaiah"
-    },
+    // {
+    //     "name":"Meena Kumari",
+    //     "src":"/Juniors/Meena.jpg",
+    //     "url":"https://www.linkedin.com/in/shreyansh-narayan-878b09222/",
+    //     "desc":"We are the Junior core member of this prestigious club of Ramaiah"
+    // },
+    // {
+    //     "name":"Amogh SK",
+    //     "src":"/Juniors/Amogh.jpg",
+    //     "url":"https://in.linkedin.com/in/amogh-sk",
+    //     "desc":"We are the Junior core member of this prestigious club of Ramaiah"
+    // },
+    // {
+    //     "name":"Aniruddh Mantrala",
+    //     "src":"/Juniors/Aniruddh.jpg",
+    //     "url":"https://www.linkedin.com/in/aniruddh-mantrala-31abb2221/",
+    //     "desc":"We are the Junior core member of this prestigious club of Ramaiah"
+    // },
 ]
 
 

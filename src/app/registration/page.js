@@ -50,7 +50,7 @@ export default function Home() {
         // setShowMsg(true);
 
         // setStudent({name:"",usn:"",branch:"",email:""});
-        // setMessage({text:"Thank You for registration",color:'bg-red-400'});
+        // setMessage({text:"Thank You for registration",color:'bg-green-400'});
 
         alert("Thank You for registration");
         router.push('/')
@@ -114,9 +114,9 @@ export default function Home() {
 
 
         {/* <div className={`${showMsg?"hidden":""} absolute w-[100px] h-[100px] border-2 border-red-200 top-0 ${message.color}`}> */}
-        <div className={` absolute w-[100px] h-[100px] border-2 border-red-200 top-0 ${message.color}`}>
-            {/* <p>{message.text}</p> */}
-        </div>
+        {/* <div className={` absolute w-[100px] h-[100px] border-2 border-red-200 pop-up ${message.color}`}>
+            <p>{message.text}</p>
+        </div> */}
       </div>
     </div>
 
