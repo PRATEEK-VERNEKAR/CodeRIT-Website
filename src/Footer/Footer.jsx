@@ -23,7 +23,7 @@ export default function Footer() {
         <p>Ramaiah Institute of Technology</p>
       </aside>
       <div className="flex w-full justify-center gap-x-6">
-        <a href="https://discord.com/invite/M6BdD5pU" target="_blank">
+        <a href="https://discord.gg/pmfYHf6cER" target="_blank">
           <Image
             src={discord}
             width={25}
