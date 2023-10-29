@@ -59,12 +59,12 @@ const Juniors=[
         "url":"https://www.linkedin.com/in/shreyansh-narayan-878b09222/",
         "desc":"We are the Junior core member of this prestigious club of Ramaiah"
     },
-    // {
-    //     "name":"Meena Kumari",
-    //     "src":"/Juniors/Meena.jpg",`
-    //     "url":"https://www.linkedin.com/in/shreyansh-narayan-878b09222/",
-    //     "desc":"We are the Junior core member of this prestigious club of Ramaiah"
-    // },
+    {
+        "name":"Meena Kumari",
+        "src":"/Juniors/Meena.jpg",
+        "url":"https://www.linkedin.com/in/shreyansh-narayan-878b09222/",
+        "desc":"We are the Junior core member of this prestigious club of Ramaiah"
+    },
     // {
     //     "name":"Amogh SK",
     //     "src":"/Juniors/Amogh.jpg",
