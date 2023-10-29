@@ -26,20 +26,20 @@ export default function Home() {
             className={`${clicked ? "#navbar active" : "#navbar"} z-50`}
           >
             <li
-              className={`${pathname === "/" ? "text-white" : "text-zinc-500"}`}
+              className={`${pathname === "/" ? "text-slate-300" : "text-zinc-500"}`}
             >
               <a href="/">Home</a>
             </li>
             <li
               className={`${
-                pathname === "/events" ? "text-white" : "text-zinc-500"
+                pathname === "/events" ? "text-slate-300" : "text-zinc-500"
               }`}
             >
               <a href="/events">Events</a>
             </li>
             <li
               className={`${
-                pathname === "/team" ? "text-white" : "text-zinc-500"
+                pathname === "/team" ? "text-slate-300" : "text-zinc-500"
               }`}
             >
               <a href="/team">Team</a>
@@ -48,7 +48,7 @@ export default function Home() {
               className={`${
                 pathname === "/registration" ? "text-white" : "text-white"
               }`}
-              style={{ fontWeight: "bold"}}
+              style={{ fontWeight: "extrabold"}}
             >
               <a href="/registration">Ice-Breaker 2023</a>
             </li>
