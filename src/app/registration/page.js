@@ -141,9 +141,9 @@ export default function Home() {
                       </div>
                       :
                       <div className='w-full h-full flex flex-col justify-between bg-gray-400'>
-                        <h1 className='text-center'>Your Response Recorded</h1>
+                        <h1 className='text-center text-3xl font-bold mt-4 text-green-900'>Your Response Recorded</h1>
                         <div className='flex justify-evenly'>
-                          <a className='px-3 py-2 bg-red-200' href='/'>Cancle</a>
+                          <a className='px-3 py-2 bg-red-200' href='/'>Cancel</a>
                           <a className='px-3 py-2 bg-red-200' href='https://chat.whatsapp.com/He9eoOHo26rDAXFiUQul9E'>Join Whatsapp</a>
                         </div>
                       </div> 
