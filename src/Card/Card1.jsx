@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function EventCard({ name, year, date, description, url }) {
   return (
     <div className="flex justify-center items-center m-[20px]">
-      <div className="w-full h-[400px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div className="w-full h-[400px] bg-white border border-gray-200 rounded-lg shadow bg-gray-800 border-gray-700">
         <div className="p-5 h-full flex flex-col items-center">
           <Image
             src={url}

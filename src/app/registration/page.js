@@ -6,7 +6,7 @@ import axios from "axios";
 import { useState } from 'react';
 import { useRouter } from 'next/navigation'
 
- 
+import "./animations.css"
 
 export default function Home() {
   const router=useRouter();
@@ -107,7 +107,7 @@ export default function Home() {
                 </div>
                 
                 <div className={`${showMsg?"":"hidden"} w-full h-[40px] text-3xl mb-3 font-bold`}>
-                  <p className={`p-2 text-center ${message.color}`}>{message.text}</p>
+                    <p className={`p-2 text-center wrong ${message.color}`}>{message.text}</p>
                 </div>
                 
                 <div className="relative py-5">

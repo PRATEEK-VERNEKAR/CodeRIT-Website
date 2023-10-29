@@ -8,19 +8,19 @@ const Juniors=[
     {
         "name":"Sahil Kulkarni",
         "src":"/Juniors/Sahil.jpg",
-        "url":"",
+        "url":"https://www.linkedin.com/in/sahil-kulkarni-825837230/",
         "desc":"Enthusiastic MERN stack developer, driven by a passion for mastering intricate Data Structures and Algorithms. Currently delving into the fascinating realm of Machine Learning, aiming to blend elegant code with innovative solutions."
     },
     {
         "name":"Abhay Gupta",
         "src":"/Juniors/Abhay.jpg",
-        "url":"",
+        "url":"https://www.linkedin.com/in/abhay-kumar-gupta-407257256/",
         "desc":`"Passionate coder and avid developer with an insatiable curiosity, exploring Indian medieval history and heritage."`
     },
     {
         "name":"Agniv",
         "src":"/Juniors/Agniv.jpg",
-        "url":"",
+        "url":"https://www.linkedin.com/in/agniv-chakraborty-b17173233/",
         "desc":`I enjoy coding, watching movies, and consider myself a Potterhead. I'm also a pet lover and passionate about dancing. I'm your go-to for all things Harry Potter spells. Ask away!"`
     },
     {
@@ -44,7 +44,7 @@ const Juniors=[
     {
         "name":"Yashashwini Singh",
         "src":"/Juniors/Yashi.jpg",
-        "url":"",
+        "url":"http://www.linkedin.com/in/yashashwini-singh-679a6122a",
         "desc":"We are the Junior core member of this prestigious club of Ramaiah"
     },
     {
@@ -65,17 +65,17 @@ const Juniors=[
         "url":"https://www.linkedin.com/in/shreyansh-narayan-878b09222/",
         "desc":"We are the Junior core member of this prestigious club of Ramaiah"
     },
-    // {
-    //     "name":"Amogh SK",
-    //     "src":"/Juniors/Amogh.jpg",
-    //     "url":"https://in.linkedin.com/in/amogh-sk",
-    //     "desc":"We are the Junior core member of this prestigious club of Ramaiah"
-    // },
     {
         "name":"Aniruddh Mantrala",
         "src":"/Juniors/Aniruddh.jpg",
         "url":"https://www.linkedin.com/in/aniruddh-mantrala-31abb2221/",
-        "desc":`while(true) { Eat.Sleep.Code }`
+        "desc":"We are the Junior core member of this prestigious club of Ramaiah"
+    },
+    {
+        "name":"Amogh SK",
+        "src":"/Juniors/Amogh.jpg",
+        "url":"https://in.linkedin.com/in/amogh-sk",
+        "desc":`A machine learning enthusiast, with experience in building products on streamlit. Gotta love PyTorch. Currently trying a hand at MLOps and delving into the world of DSA. Also a novice web developer who can make mean coffee.`
     },
 ]
 

@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function FacultyCard({person}){
     return(
         <div className="flex justify-center items-center m-[20px] shadow-2xl">
-        <div className="w-full h-[500px] bg-white border border-gray-200 rounded-lg  shadow dark:bg-gray-800 dark:border-gray-700">
+        <div className="w-full h-[500px] border border-gray-200 rounded-lg  shadow bg-gray-800 border-gray-700">
                  <div className="p-5 h-full flex flex-col items-center ">
                      <Image src={person.src}
                      width={0}
