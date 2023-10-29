@@ -60,7 +60,7 @@ export default function Home() {
             </div>
 
             <div id="mobile">
-                <Image id="bar" src={clicked?"/delete.png":"/hamburger.png"} onClick={handleClick} width={20} height={20}></Image>
+                <Image id="bar" src={clicked?"/delete.png":"/hamburger.png"} onClick={handleClick} width={30} height={20}></Image>
                 {/* <Image src="/delete.png" width={20} height={20}></Image> */}
 
             </div>
