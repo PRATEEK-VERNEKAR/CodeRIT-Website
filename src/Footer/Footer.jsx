@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-// import logo from "@/public/logo.png";
+import logo from "@/public/logo/logo.png";
 import discord from "@/public/socials/discord.svg";
 import github from "@/public/socials/github.svg";
 import instagram from "@/public/socials/instagram.svg";
@@ -16,7 +16,7 @@ export default function Footer() {
     text-white text-center"
     >
       <aside className="mb-4 text-center">
-        <Image src="/logo.png" width={200} height={200} alt="CodeRIT Logo" className="mx-auto" />
+        <Image src={logo} width={200} alt="CodeRIT Logo" className="mx-auto" />
         <p className="font-bold">
           CodeRIT <br />A community that helps develop the Coding culture of RIT
         </p>
