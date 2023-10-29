@@ -70,7 +70,7 @@ const Intro = () => {
         <div id="grid">
           <div id="grid-item">
             <center>
-              <h3>Vision</h3>
+              <h3 class="bold-text">Vision</h3>
             </center>
             <p>
               Creating a Community of enthusiastic coders with holistic
@@ -80,7 +80,7 @@ const Intro = () => {
           </div>
           <div id="grid-item">
             <center>
-              <h3>Mission</h3>
+              <h3 class="bold-text">Mission</h3>
             </center>
 
             <p>
