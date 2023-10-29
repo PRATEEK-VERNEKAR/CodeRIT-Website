@@ -77,8 +77,9 @@ export default function Home() {
             </li>
             <li
               className={`${
-                pathname === "/registration" ? "text-white" : "text-zinc-500"
+                pathname === "/registration" ? "text-white" : "text-white"
               }`}
+              style={{ fontWeight: "bold"}}
             >
               <a href="/registration">Ice-Breaker 2023</a>
             </li>
