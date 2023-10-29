@@ -39,7 +39,7 @@ const Juniors=[
         "name":"Siddharth",
         "src":"/Juniors/Siddharth.jpg",
         "url":"https://www.linkedin.com/in/siddharth-bhetariya/",
-        "desc":"We are the Junior core member of this prestigious club of Ramaiah"
+        "desc":"Balancing between Competitive Codes and Crafting Codes ⚔️🚀"
     },
     {
         "name":"Yashashwini Singh",
@@ -51,7 +51,7 @@ const Juniors=[
         "name":"Arjun Golla",
         "src":"/Juniors/Arjun.jpg",
         "url":"https://www.linkedin.com/in/arjungolla/",
-        "desc":"We are the Junior core member of this prestigious club of Ramaiah"
+        "desc":"Binary dreamer and algorithm whisperer. I turn coffee into functional applications"
     },
     {
         "name":"Shreyansh Narayana",
@@ -61,7 +61,7 @@ const Juniors=[
     },
     // {
     //     "name":"Meena Kumari",
-    //     "src":"/Juniors/Meena.jpg",
+    //     "src":"/Juniors/Meena.jpg",`
     //     "url":"https://www.linkedin.com/in/shreyansh-narayan-878b09222/",
     //     "desc":"We are the Junior core member of this prestigious club of Ramaiah"
     // },
@@ -71,12 +71,12 @@ const Juniors=[
     //     "url":"https://in.linkedin.com/in/amogh-sk",
     //     "desc":"We are the Junior core member of this prestigious club of Ramaiah"
     // },
-    // {
-    //     "name":"Aniruddh Mantrala",
-    //     "src":"/Juniors/Aniruddh.jpg",
-    //     "url":"https://www.linkedin.com/in/aniruddh-mantrala-31abb2221/",
-    //     "desc":"We are the Junior core member of this prestigious club of Ramaiah"
-    // },
+    {
+        "name":"Aniruddh Mantrala",
+        "src":"/Juniors/Aniruddh.jpg",
+        "url":"https://www.linkedin.com/in/aniruddh-mantrala-31abb2221/",
+        "desc":"We are the Junior core member of this prestigious club of Ramaiah"
+    },
 ]
 
 
