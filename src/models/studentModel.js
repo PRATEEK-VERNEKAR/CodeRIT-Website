@@ -19,7 +19,7 @@ const studentSchema =new mongoose.Schema({
         // unique:true,
     },
     phone:{
-        type:Number,
+        type:String,
         required:[true,"Phone No Required"],
     },
     queries:String

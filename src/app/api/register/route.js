@@ -9,7 +9,7 @@ export async function POST(request){
         await connect();
 
         const reqBody=await request.json();
-        // console.log(reqBody);
+        console.log(reqBody);
         const {name,usn,branch,email,phone,queries}=reqBody;
 
         const newStud=Student({
@@ -21,10 +21,10 @@ export async function POST(request){
             queries
         })
 
-        // console.log(newStud);
+        console.log(newStud);
 
         const savedUser=await newStud.save();
-        // console.log(savedUser);
+        console.log(savedUser);
 
         return NextResponse.json({
             message:"Created User successfully",

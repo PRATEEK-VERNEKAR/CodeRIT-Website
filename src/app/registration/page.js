@@ -28,8 +28,8 @@ export default function Home() {
     // console.log(student)
     
     if(!student.name || !student.usn || !student.branch || !student.email || !student.phone){
-      setShowMsg(true);
-      setMessage({text:"Enter all fields",color:'bg-red-400'});
+      // setShowMsg(true);
+      // setMessage({text:"Enter all fields",color:'bg-red-400'});
       alert("Enter all fields");
       console.log("EMPYT")
       return 
@@ -40,8 +40,8 @@ export default function Home() {
       console.log(res);
 
       if(res.status!=200){
-        setShowMsg(true);
-        setMessage({text:"Your response could not be stored",color:'bg-red-400'});
+        // setShowMsg(true);
+        // setMessage({text:"Your response could not be stored",color:'bg-red-400'});
 
         alert("Your response could not be stored")
         return;
@@ -49,7 +49,7 @@ export default function Home() {
       else{
         // setShowMsg(true);
 
-        setStudent({name:"",usn:"",branch:"",email:""});
+        // setStudent({name:"",usn:"",branch:"",email:""});
         // setMessage({text:"Thank You for registration",color:'bg-red-400'});
 
         alert("Thank You for registration");
