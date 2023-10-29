@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import axios from "axios";
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation'
 
 import "./animations.css"
@@ -13,6 +13,8 @@ export default function Home() {
 
   const [message,setMessage]=useState({text:"",color:""});
   const [showMsg,setShowMsg]=useState(false);
+  const [showWindow,setShowWindow]=useState(false);
+  const [load,setLoad]=useState(true);
   const [student,setStudent]=useState({name:"",usn:"",branch:"",email:"",phone:"",queries:""});
 
 
@@ -23,10 +25,22 @@ export default function Home() {
     setStudent({...student,[name]:value});
   }
 
+  useEffect(()=>{
+
+    // const formArea=document.getElementById('form-area');
+    const formArea=document.querySelector('#form-area');
+    const windowArea=document.getElementById('window-area');
+
+    if(showWindow){
+      formArea.classList.add('blur-lg')
+      // windowArea.classList.add('blur-none')
+    }
+
+  },[showWindow])
+
   const handleSubmit=async (e)=>{
     e.preventDefault();
 
-    // console.log(student)
     
     if(!student.name || !student.usn || !student.branch || !student.email || !student.phone){
       setShowMsg(true);
@@ -41,32 +55,19 @@ export default function Home() {
     }
 
     try{
+      setShowWindow(true);
+
       const res=await axios.post('/api/register',student);
-      // console.log(res);
+      
 
       if(res.status!=200){
-        setShowMsg(true);
-        setMessage({text:"Your response could not be stored",color:'text-red-400'});
-
-
-        setTimeout(()=>{
-          setShowMsg(false);
-          setMessage({text:"",color:''});
-        },1000)
 
         return;
       }
       else{
-        setShowMsg(true);
+        setLoad(false);
 
         setStudent({name:"",usn:"",branch:"",email:"",phone:"",queries:""});
-        setMessage({text:"Thank You for registration",color:'text-green-400'});
-
-        setTimeout(()=>{
-          setShowMsg(false);
-          setMessage({text:"",color:''});
-          router.push('https://chat.whatsapp.com/He9eoOHo26rDAXFiUQul9E')
-        },1000)
 
       }
     }
@@ -78,15 +79,13 @@ export default function Home() {
 
   return (
     <>
-      <div className="mt-[72px] bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
-      <div className="relative py-3 w-[90%] sm:max-w-xl sm:mx-auto">
+      <div className="relative mt-[72px] bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
+      <div className="relative py-3 w-[90%] sm:max-w-xl sm:mx-auto" >
         <div
           className="absolute inset-0 bg-gradient-to-r from-blue-300 to-blue-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
         </div>
         <div className="relative px-4 py-4 bg-white shadow-lg sm:rounded-3xl sm:p-10">
-          <div className="max-w-md mx-auto">
-            
-
+          <div className="max-w-md mx-auto" id='form-area'>
             <div>
               <h1 className="text-3xl font-semibold text-black text-center">Ice Breaker</h1>
             </div>
@@ -109,6 +108,8 @@ export default function Home() {
                 <div className={`${showMsg?"":"hidden"} w-full h-[40px] text-3xl mb-3 font-bold`}>
                     <p className={`p-2 text-center wrong ${message.color}`}>{message.text}</p>
                 </div>
+
+
                 
                 <div className="relative py-5">
                   <input onChange={handleChange} value={student.email} autoComplete="off" id="email" name="email" type="text" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Email" />
@@ -130,6 +131,23 @@ export default function Home() {
 
               </div>
             </div>
+          </div>
+
+          <div id='window-area' className={`${showWindow?"":""} absolute z-10  w-[90%] h-[150px] top-64 left-7`}>
+                    {
+                      !load?
+                      <div className='w-full h-full flex justify-center items-center'>
+                        <Image src='/Loader.svg' width={100} height={100}></Image>
+                      </div>
+                      :
+                      <div className='w-full h-full flex flex-col justify-between bg-gray-400'>
+                        <h1 className='text-center'>Your Response Recorded</h1>
+                        <div className='flex justify-evenly'>
+                          <a className='px-3 py-2 bg-red-200' href='/'>Cancle</a>
+                          <a className='px-3 py-2 bg-red-200' href='https://chat.whatsapp.com/He9eoOHo26rDAXFiUQul9E'>Join Whatsapp</a>
+                        </div>
+                      </div> 
+                    }
           </div>
         </div>
 

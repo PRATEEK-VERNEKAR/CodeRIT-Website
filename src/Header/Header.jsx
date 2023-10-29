@@ -45,7 +45,7 @@ export default function Home() {
                   </div>
               </nav>
           </header> */}
-      <nav className="fixed w-full z-10">
+      <nav className="fixed w-full z-20">
         <a href="/" className="text-white text-3xl">
           <Image src={logo} width={80} alt="CodeRIT logo" className="mx-auto" />
         </a>
