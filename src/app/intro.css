@@ -83,6 +83,6 @@
   }
 }
 
-#grid-item .bold-text {
+.bold-text {
   font-weight: bold;
 }

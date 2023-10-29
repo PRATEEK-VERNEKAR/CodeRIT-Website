@@ -6,14 +6,14 @@
 //       <div className="pt-[100px] bg-gradient-to-r from-cyan-500 to-blue-500 px-4">
 //        <div className="grid grid-cols-2 gap-2 p-3 w-full  min-h-[300px]">
 //          <div className="border-2 border-amber-500 flex justify-center align-center">
-//           <Image src="/homebg.jpeg"   
+//           <Image src="/homebg.jpeg"
 //             width={0}
 //             height={0}
 //             sizes="100vw"
-//             style={{ width: '90%', height: 'auto' }}/>    
+//             style={{ width: '90%', height: 'auto' }}/>
 //          </div>
 //          <div  className="border-2 border-amber-500 break-words">
-//             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> 
+//             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 //          </div>
 //        </div>
 //        <div>
@@ -21,15 +21,12 @@
 //         <p className='break-words pb-4'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 //         <p className='break-words pb-4'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 //         <p className='break-words pb-4'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        
+
 //        </div>
 //       </div>
 //     </>
 //   )
 // }
-
-
-
 
 import React from "react";
 import "./intro.css";
@@ -39,12 +36,8 @@ const Intro = () => {
   return (
     <div id="intro" className="flex flex-col items-center">
       <div className="container ">
-        <img
-          src="./Intro Video.gif"
-          alt="test"
-          className="introimg w-full"
-        />
-        
+        <img src="./Intro Video.gif" alt="test" className="introimg w-full" />
+
         {/* <div className="centered">
           <h2 className="text-red-700 text-4xl">
             A community that helps develop the Coding Culture of Ramaiah
@@ -95,9 +88,22 @@ const Intro = () => {
           </div>
         </div>
       </div>
+      <div class="text-center">
+        <h1 id="intro-head">Upcoming Events</h1>
+        <h3 class="bold-text">Ice-Breaker 2023</h3>
+        <div class="inline-block mt-4 mb-4">
+          <img src="./Website.png" alt="Image" class="h-80" />
+<br></br>
+          <a
+            href="/registration"
+            class="inline-block px-4 py-2  bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-md"
+          >
+            Register Now
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
 
 export default Intro;
-
