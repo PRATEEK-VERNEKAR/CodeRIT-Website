@@ -6,7 +6,7 @@ export default function Card({person}){
     return(
         <div className="flex justify-center items-center m-[20px] shadow-2xl">
             <div className="w-full h-[650px] border border-gray-200 rounded-lg  shadow bg-gray-800 border-gray-700
-            hover:bg-gray-500">
+            hover:bg-gray-700">
                 <div className="p-5 h-full flex flex-col items-center ">
                     <Image src={person.src}
                     width={0}
