@@ -3,7 +3,7 @@ const Juniors=[
         "name":"Prateek M Vernekar",
         "src":"/Juniors/Prateek.jpg",
         "url":"https://www.linkedin.com/in/prateek-vernekar-057b1b228/",
-        "desc":"We are the Junior core member of this prestigious club of Ramaiah"
+        "desc":"Programming is everything for me. I live, sleep and breathe in AIML , Development and DSA"
     },
     {
         "name":"Sahil Kulkarni",
