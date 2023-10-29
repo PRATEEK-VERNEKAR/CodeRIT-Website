@@ -17,7 +17,6 @@ export default function Home() {
   const [load,setLoad]=useState(true);
   const [student,setStudent]=useState({name:"",usn:"",branch:"",email:"",phone:"",queries:""});
 
-
   const handleChange=(e)=>{
     e.preventDefault();
     const name=e.target.name;
@@ -36,7 +35,6 @@ export default function Home() {
 
   const handleSubmit=async (e)=>{
     e.preventDefault();
-
     
     if(!student.name || !student.usn || !student.branch || !student.email || !student.phone){
       setShowMsg(true);
@@ -52,18 +50,14 @@ export default function Home() {
 
     try{
       setShowWindow(true);
-
       const res=await axios.post('/api/register',student);
-      
 
       if(res.status!=200){
         return;
       }
       else{
         setLoad(false);
-
         setStudent({name:"",usn:"",branch:"",email:"",phone:"",queries:""});
-
       }
     }
     catch(error){
@@ -74,17 +68,16 @@ export default function Home() {
 
   return (
     <>
-      <div className="relative mt-[72px] bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
+      <div className="relative mt-[72px] bg-gray-100 py-6 flex  justify-center sm:py-12">
       <div className="relative py-3 w-[90%] sm:max-w-xl sm:mx-auto" >
         <div
-          className="absolute inset-0 bg-gradient-to-r from-blue-300 to-blue-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
+          className="absolute inset-0 bg-gradient-to-r from-blue-300 to-blue-600 ioshadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
         </div>
         <div className="relative px-4 py-4 bg-white shadow-lg sm:rounded-3xl sm:p-10">
           <div className="max-w-md mx-auto" id='form-area'>
             <div>
               <h1 className="text-3xl font-semibold text-black text-center">Ice Breaker</h1>
             </div>
-
             <div className="divide-y divide-gray-200">
               <div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                 <div className="relative py-5">
@@ -99,12 +92,10 @@ export default function Home() {
                   <input onChange={handleChange} value={student.branch} autoComplete="off" id="branch" name="branch" type="text" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Branch" />
                   <label htmlFor="branch" className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Branch</label>
                 </div>
-                
+
                 <div className={`${showMsg?"":"hidden"} w-full h-[40px] text-3xl mb-3 font-bold`}>
                     <p className={`p-2 text-center wrong ${message.color}`}>{message.text}</p>
                 </div>
-
-
                 
                 <div className="relative py-5">
                   <input onChange={handleChange} value={student.email} autoComplete="off" id="email" name="email" type="text" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Email" />
@@ -118,7 +109,6 @@ export default function Home() {
                   <input onChange={handleChange} value={student.queries} autoComplete="off" id="queries" name="queries" type="text" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Queries" />
                   <label htmlFor="queries" className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Queries for core team</label>
                 </div>
-                
  
                 <div className=" text-center " onClick={handleSubmit}>
                   <button className="bg-blue-500 text-white rounded-md px-2 py-1">Submit</button>
@@ -127,7 +117,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
           <div className={`${showWindow?"":"hidden"} absolute z-10  w-[90%] h-[150px] top-64 left-7`}>
                     {
                       load?
@@ -146,8 +135,6 @@ export default function Home() {
                     }
           </div>
         </div>
-
-
       </div>
     </div>
 
