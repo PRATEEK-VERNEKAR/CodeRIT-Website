@@ -15,17 +15,6 @@ export default function Home() {
   const [showMsg,setShowMsg]=useState(false);
   const [student,setStudent]=useState({name:"",usn:"",branch:"",email:"",phone:"",queries:""});
 
-  // useEffect(() => {
-
-  //   const timer = setTimeout(() => {
-  //     console.log('After 3 seconds, do something else');
-  //     set
-  //   }, 3000);
-
-  //   return () => {
-  //     clearTimeout(timer);
-  //   };
-  // }, [showMsg]);
 
   const handleChange=(e)=>{
     e.preventDefault();
@@ -46,46 +35,43 @@ export default function Home() {
       setTimeout(()=>{
         setShowMsg(false);
         setMessage({text:"",color:''});
-      },2000)
+      },1000)
 
-      console.log("EMPYT")
       return 
     }
 
     try{
       const res=await axios.post('/api/register',student);
-      console.log(res);
+      // console.log(res);
 
       if(res.status!=200){
         setShowMsg(true);
         setMessage({text:"Your response could not be stored",color:'text-red-400'});
 
-        // alert("Your response could not be stored")
 
         setTimeout(()=>{
           setShowMsg(false);
           setMessage({text:"",color:''});
-        },2000)
+        },1000)
 
         return;
       }
       else{
         setShowMsg(true);
 
-        setStudent({name:"",usn:"",branch:"",email:""});
+        setStudent({name:"",usn:"",branch:"",email:"",phone:"",queries:""});
         setMessage({text:"Thank You for registration",color:'text-green-400'});
 
         setTimeout(()=>{
           setShowMsg(false);
           setMessage({text:"",color:''});
           router.push('https://chat.whatsapp.com/He9eoOHo26rDAXFiUQul9E')
-        },2000)
+        },1000)
 
       }
     }
     catch(error){
       alert("Server Error")
-      // console.log(error)
     }
     
   }
@@ -147,11 +133,6 @@ export default function Home() {
           </div>
         </div>
 
-
-        {/* <div className={`${showMsg?"hidden":""} absolute w-[100px] h-[100px] border-2 border-red-200 top-0 ${message.color}`}> */}
-        {/* <div className={`${showMsg?"pop-up":"hidden"} absolute w-[100px] h-[100px] border-2 border-red-200 ${message.color}`}>
-            <p>{message.text}</p>
-        </div> */}
 
       </div>
     </div>
