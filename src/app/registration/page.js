@@ -124,12 +124,11 @@ export default function Home() {
                         <Image src='/Loader.svg' width={100} height={100}></Image>
                       </div>
                       :
-                      <div className='w-full h-full flex flex-col justify-between items-center bg-gray-400 rounded-3xl'>
-                        <h1 className='text-center text-3xl font-bold mt-4 text-green-900'>Your Response Recorded</h1>
-                        <span className='text-3xl'> &#128591; </span>
-                        <div className='flex justify-evenly w-full mb-2 '>
-                          <a onClick={()=>{setShowWindow(false)}} className=' rounded-full px-3 py-2 bg-red-200' href='/'>Cancel</a>
-                          <a onClick={()=>{setShowWindow(false)}} className=' rounded-full px-3 py-2 bg-red-200' target='_blanck' href='https://chat.whatsapp.com/He9eoOHo26rDAXFiUQul9E'>Join Whatsapp</a>
+                      <div className='w-full h-full flex flex-col justify-between items-center bg-blue-500 rounded-3xl'>
+                        <h1 className='text-center text-3xl font-bold mt-5 text-white'>Your Response was Recorded</h1>
+                        <div className='flex justify-evenly w-full mb-5 '>
+                          <a onClick={()=>{setShowWindow(false)}} className=' rounded-full px-3 py-2 text-white bg-red-600' href='/'>Cancel</a>
+                          <a onClick={()=>{setShowWindow(false)}} className=' rounded-full px-3 py-2 text-white bg-green-500' target='_blanck' href='https://chat.whatsapp.com/He9eoOHo26rDAXFiUQul9E'>Join Whatsapp Community</a>
                         </div>
                       </div> 
                     }

@@ -8,6 +8,32 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'CodeRIT',
   description: 'A community that helps develop the Coding culture of RIT',
+  keywords:
+    "coding,coderit,ramaiah,rit,code,programming,msrit,college,club",
+  openGraph: {
+    title: "CodeRIT",
+    type: "website",
+    locale: "en_IE",
+    url: "https://coderit.netlify.app/",
+    siteName: "CodeRIT",
+    description:
+      "A community that helps develop the Coding culture of RIT",
+    images: [
+      {
+        url: "https://i.ibb.co/THPrSvG/Frame-15.png",
+        width: 1200,
+        height: 630,
+        alt: "CodeRIT Cover Image",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "CodeRIT",
+    description:
+      "A community that helps develop the Coding culture of RIT",
+  },
 }
 
 const mystyle={
