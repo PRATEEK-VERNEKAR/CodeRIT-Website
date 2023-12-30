@@ -27,7 +27,7 @@ const Intro = () => {
         <div id="grid">
           <div id="grid-item">
             <center>
-              <h3 class="bold-text">Vision</h3>
+              <h3 className="bold-text">Vision</h3>
             </center>
             <p>
               Creating a Community of enthusiastic coders with holistic
@@ -37,7 +37,7 @@ const Intro = () => {
           </div>
           <div id="grid-item">
             <center>
-              <h3 class="bold-text">Mission</h3>
+              <h3 className="bold-text">Mission</h3>
             </center>
             <p>
               Aims to establish a coding culture on campus, reaching every
@@ -47,15 +47,15 @@ const Intro = () => {
           </div>
         </div>
       </div>
-      <div class="text-center">
+      <div className="text-center">
         <h1 id="intro-head">Upcoming Events</h1>
-        <h3 class="bold-text">Ice-Breaker 2023</h3>
-        <div class="inline-block mt-4 mb-4">
-          <img src="./Website.png" alt="Image" class="h-80" />
+        <h3 className="bold-text">Ice-Breaker 2023</h3>
+        <div className="inline-block mt-4 mb-4">
+          <img src="./Website.png" alt="Image" className="h-80" />
 <br></br>
           <a
             href="/registration"
-            class="inline-block px-4 py-2  bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-md"
+            className="inline-block px-4 py-2  bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-md"
           >
             Register Now
           </a>

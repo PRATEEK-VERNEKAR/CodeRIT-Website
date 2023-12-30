@@ -6,6 +6,7 @@ export default function EventCard({ name, year, date, description, url }) {
       <div className="w-full h-[400px] border border-gray-200 rounded-lg shadow bg-gray-800 border-gray-700">
         <div className="p-5 h-full flex flex-col items-center">
           <Image
+            alt='teams'
             src={url}
             width={0}
             height={0}

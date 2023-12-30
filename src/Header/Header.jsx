@@ -50,7 +50,7 @@ export default function Home() {
               }`}
               style={{ fontWeight: "extrabold"}}
             >
-              <a href="/registration">Ice-Breaker 2023</a>
+              <a href="/registration">Music Event 2024</a>
             </li>
           </ul>
         </div>
@@ -62,6 +62,7 @@ export default function Home() {
             onClick={handleClick}
             width={20}
             height={20}
+            alt='hamburger'
           ></Image>
         </div>
       </nav>

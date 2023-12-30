@@ -7,6 +7,7 @@ export default function FacultyCard({person}){
         <div className="w-full h-[500px] border border-gray-200 rounded-lg  shadow bg-gray-800 border-gray-700">
                  <div className="p-5 h-full flex flex-col items-center ">
                      <Image src={person.src}
+                     alt='faculty'
                      width={0}
                      height={0}
                      sizes="100vw"
@@ -15,7 +16,7 @@ export default function FacultyCard({person}){
                      <h1 className="text-3xl text-white p-4 ">{person.name}</h1>
                      <p className="h-[30%] text-yellow-600">{person.desc}</p>
                      <a href={person.url} className="text-white">
-                         <Image src="/home.gif" width={50} height={50}/>
+                        <Image src="/home.gif" width={50} height={50} alt='logo'/>
                      </a>
                  </div>
              </div>

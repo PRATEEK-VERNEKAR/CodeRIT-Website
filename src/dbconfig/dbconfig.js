@@ -4,6 +4,7 @@ const mongoURI = process.env.DB_URL;
 
 export async function connect(){
     try{
+        console.log(mongoURI);
         await mongoose.connect(mongoURI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,

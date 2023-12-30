@@ -14,7 +14,7 @@ export const metadata = {
     title: "CodeRIT",
     type: "website",
     locale: "en_IE",
-    url: "https://coderit.netlify.app/",
+    url: "http://localhost:3000/registration",
     siteName: "CodeRIT",
     description:
       "A community that helps develop the Coding culture of RIT",

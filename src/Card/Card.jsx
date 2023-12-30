@@ -9,6 +9,7 @@ export default function Card({person}){
             hover:bg-gray-700">
                 <div className="p-5 h-full flex flex-col items-center ">
                     <Image src={person.src}
+                    alt="teams"
                     width={0}
                     height={0}
                     sizes="100vw"
@@ -17,7 +18,7 @@ export default function Card({person}){
                     <h1 className="text-3xl text-white p-4 ">{person.name}</h1>
                     <p className="h-[40%] flex justify-center items-center text-sm lg:text-lg text-yellow-600">{person.desc}</p>
                     <a href={person.url} className="text-white">
-                        <Image src="socials/linkedin.svg" width={50} height={50}/>
+                        <Image src="socials/linkedin.svg" width={50} height={50} alt='logo'/>
                     </a>
                 </div>
             </div>
