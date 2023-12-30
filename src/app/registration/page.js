@@ -46,13 +46,15 @@ export default function Home() {
         setMessage({text:"",color:''});
       },1000)
 
-      return 
+      return;
     }
 
     try{
       setShowWindow(true);
+      console.log(showWindow);
       const res=await axios.post('/api/register',student);
 
+      console.log(res.status);
       if(res.status!=200){
         return;
       }
