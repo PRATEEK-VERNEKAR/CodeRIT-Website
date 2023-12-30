@@ -21,7 +21,6 @@ export default function Home() {
     e.preventDefault();
     const name=e.target.name;
     const value=e.target.value;
-    console.log(name,value);
     setStudent({...student,[name]:value});
   }
 
@@ -51,10 +50,8 @@ export default function Home() {
 
     try{
       setShowWindow(true);
-      console.log(showWindow);
       const res=await axios.post('/api/register',student);
 
-      console.log(res.status);
       if(res.status!=200){
         return;
       }
